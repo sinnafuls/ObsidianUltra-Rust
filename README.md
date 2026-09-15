@@ -19,7 +19,7 @@ A Rust port of the [Obsidian](https://github.com/deividcomsono/Obsidian) Roblox 
 <details>
 <summary>150% DPI scale</summary>
 
-__omp_shell("[dpi150](docs/dpi150.png)")
+![dpi150](docs/dpi150.png)
 </details>
 
 ```
