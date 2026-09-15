@@ -2,12 +2,30 @@
 
 A Rust port of the [Obsidian](https://github.com/deividcomsono/Obsidian) Roblox UI library: the same retained object model (window -> tabs -> groupboxes -> elements with handles, `set_value`, listeners and global `Toggles`/`Options` registries), the same look, drawn with [egui](https://github.com/emilk/egui)'s painter. Runs standalone (eframe) or inside any egui host, including DirectX overlay hooks.
 
-![showcase](docs/showcase.png)
+![main](docs/main.png)
+
+| Settings tab (DPI, radius, theme) | Expanded dropdown |
+|---|---|
+| ![settings](docs/settings.png) | ![dropdown](docs/dropdown.png) |
+
+| Priority dropdown | Dialog with wait-time button |
+|---|---|
+| ![priority](docs/priority.png) | ![dialog](docs/dialog.png) |
+
+| Notifications, history panel, watermark, draggables | Loading screen |
+|---|---|
+| ![notifications](docs/notifications.png) | ![loading](docs/loading.png) |
+
+<details>
+<summary>150% DPI scale</summary>
+
+__omp_shell("[dpi150](docs/dpi150.png)")
+</details>
 
 ```
 cargo run -p obsidian-showcase                       # interactive showcase
 cargo run -p obsidian-showcase -- --dpi 150          # start at 150% DPI scale
-cargo run -p obsidian-showcase -- --screenshot x.png # render a few frames, save, exit
+cargo run -p obsidian-showcase -- --screenshot x.png # render, save a screenshot, exit
 cargo test --workspace                               # unit + headless behavior tests
 ```
 
@@ -50,7 +68,7 @@ let mut obsidian = Obsidian::new(ui.clone());
 // obsidian.show(&ctx);
 ```
 
-Open/close the menu with `RightControl` (`WindowInfo::toggle_keybind`) or `ui.toggle(None)`. The showcase's `OBSIDIAN_DEMO_*` environment variables open the states shown above.
+Open/close the menu with `RightControl` (`WindowInfo::toggle_keybind`) or `ui.toggle(None)`. The showcase's `OBSIDIAN_DEMO_*` environment variables open the states shown above. The showcase's `OBSIDIAN_DEMO_*` environment variables open the states shown above.
 
 ## Embedding in an existing egui host
 
