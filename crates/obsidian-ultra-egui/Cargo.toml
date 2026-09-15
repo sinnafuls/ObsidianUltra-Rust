@@ -1,0 +1,19 @@
+[package]
+name = "obsidian-ultra-egui"
+version = "0.1.0"
+description = "egui backend for Obsidian Ultra: draws the retained Obsidian model with egui's painter and hosts its text fields."
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+keywords = ["gui", "egui", "overlay", "ui", "obsidian"]
+categories = ["gui"]
+
+[lib]
+name = "obsidian_ultra_egui"
+
+[dependencies]
+obsidian-ultra-core = { path = "../obsidian-ultra-core", version = "0.1.0" }
+egui = { workspace = true }
+egui_extras = { workspace = true }
+include_dir = { workspace = true }

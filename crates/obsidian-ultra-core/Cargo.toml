@@ -1,0 +1,19 @@
+[package]
+name = "obsidian-ultra-core"
+version = "0.1.0"
+description = "Renderer-agnostic core of Obsidian Ultra: a retained-model, custom-drawn UI library (Rust port of the Obsidian Roblox library)."
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+keywords = ["gui", "egui", "overlay", "ui", "obsidian"]
+categories = ["gui"]
+
+[lib]
+name = "obsidian_ultra_core"
+
+[dependencies]
+epaint = { workspace = true }
+emath = { workspace = true }
+parking_lot = { workspace = true }
+slotmap = { workspace = true }

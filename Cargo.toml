@@ -1,0 +1,28 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/obsidian-ultra-core",
+    "crates/obsidian-ultra-egui",
+    "examples/showcase",
+]
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.96"
+license = "MIT"
+repository = "https://github.com/sinnafuls/ObsidianUltra-Rust"
+
+[workspace.dependencies]
+egui = "0.36"
+epaint = "0.36"
+emath = "0.36"
+egui_extras = { version = "0.36", features = ["svg", "image"] }
+eframe = "0.36"
+parking_lot = "0.12"
+slotmap = "1.1"
+include_dir = "0.7"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+
+[profile.release]
+opt-level = 3
+lto = "thin"

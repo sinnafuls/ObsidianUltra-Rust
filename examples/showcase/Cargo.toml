@@ -1,0 +1,18 @@
+[package]
+name = "obsidian-showcase"
+version = "0.1.0"
+publish = false
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "obsidian-showcase"
+path = "src/main.rs"
+
+[dependencies]
+obsidian-ultra-core = { path = "../../crates/obsidian-ultra-core" }
+obsidian-ultra-egui = { path = "../../crates/obsidian-ultra-egui" }
+eframe = { workspace = true }
+egui = { workspace = true }
+image = { workspace = true }
